@@ -140,6 +140,7 @@
 							<option value="Grain">Grain</option>
 							<option value="Dairy">Dairy</option>
 							<option value="Junk">Junk</option>
+							<option value="Other">Other</option>
 							</select>
 							<?php endif; ?>
 						</div>
