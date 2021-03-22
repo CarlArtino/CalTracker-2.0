@@ -46,13 +46,7 @@
 		<div class="collapse navbar-collapse" id="navbarNav">
 			<ul class="navbar-nav ml-md-auto">
 				<li class="nav-item active">
-					<a class="nav-link" href="http://localhost/isp/CalTracker/MealMaker.php">Home</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="http://localhost/isp/CalTracker/help.php">Help</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="http://localhost/isp/CalTracker/about.php">About</a>
+					<a class="nav-link" href="MealMaker.php">Home</a>
 				</li>
 			</ul>
 		</div>
