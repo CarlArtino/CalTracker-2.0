@@ -29,7 +29,7 @@
 		<?php
 			// Database Connection
 
-			$mysqli = new mysqli('localhost', 'root', '', 'isp') or die(mysqli_error(mysqli));
+			$mysqli = new mysqli('localhost', 'root', '', 'CalTracker') or die(mysqli_error(mysqli));
 
             // Test isset for session array. set if not
 

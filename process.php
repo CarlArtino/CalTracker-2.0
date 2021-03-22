@@ -4,7 +4,7 @@ if(!isset($_SESSION)){
  session_start();
 }
 
-$mysqli = new mysqli('localhost', 'root', '', 'isp') or die(mysqli_error($mysqli));
+$mysqli = new mysqli('localhost', 'root', '', 'CalTracker') or die(mysqli_error($mysqli));
 
 $id = 0;
 $price = '';

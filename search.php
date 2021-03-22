@@ -52,7 +52,7 @@
 					<form action="delete.php" method="post" id="deleteFood" onsubmit="return validateDelete()"></form>
       <?php
       //database connection
-      			$mysqli = new mysqli('localhost', 'root', '', 'isp') or die(mysqli_error(mysqli));
+      			$mysqli = new mysqli('localhost', 'root', '', 'CalTracker') or die(mysqli_error(mysqli));
 
       //getting search value
             $query = $_GET['search'];

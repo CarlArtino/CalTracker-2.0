@@ -54,7 +54,7 @@
 
     <div class="container">
 		<?php
-			$mysqli = new mysqli('localhost', 'root', '', 'isp') or die(mysqli_error(mysqli));
+			$mysqli = new mysqli('localhost', 'root', '', 'CalTracker') or die(mysqli_error(mysqli));
 			$result = $mysqli->query("SELECT * FROM foods") or die($mysqli_error->error);
 			//pre_r($result->fetch_assoc());
 
