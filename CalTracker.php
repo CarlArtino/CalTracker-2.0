@@ -59,57 +59,8 @@
 			//pre_r($result->fetch_assoc());
 
 		?>
-
-			<span style="padding-left:20px">
-			<div class="row justify-content-center">
-				<table class="table">
-					<thead>
-						<tr>
-							<th>Name</th>
-							<th>Type</th>
-							<th>Brand</th>
-							<th>Calories</th>
-							<th>Fat</th>
-							<th>Cholesterol</th>
-							<th>Sodium</th>
-							<th>Carbs</th>
-							<th>Protein</th>
-							<th colspan="2">Action</th>
-						</tr>
-					</thread>
-
-					<script src="validateAdmin.js"></script>
-
-					<form action="MealMaker.php" method="post" id="addFood"></form>
-					<form action="delete.php" method="post" id="deleteFood" onsubmit="return validateDelete()"></form>
-					
-					
-					
-					<?php
-						while ($row = $result->fetch_assoc()): ?>
-							<tr>
-								<td><?php echo $row['foodName'] ?></td>
-								<td><?php echo $row['foodType'] ?></td>
-								<td><?php echo $row['foodBrand'] ?></td>
-								<td><?php echo $row['calories'] ?></td>
-								<td><?php echo $row['fat'] ?></td>
-								<td><?php echo $row['cholesterol'] ?></td>
-								<td><?php echo $row['sodium'] ?></td>
-								<td><?php echo $row['carbs'] ?></td>
-								<td><?php echo $row['protein'] ?></td>
-
-								<td>
-									<button type="submit" name="ateFood" form="addFood" value="<?= $row['foodID'] ?>"
-										class="btn btn-info">Add</button>
-									<button type="submit" name="deleteFood" form="deleteFood" value="<?= $row['foodID'] ?>"
-										class="btn btn-danger">Delete</button>
-								</td>
-							</tr>
-						<?php endwhile; ?>
-				</table>
-			</div>
-			
 		<div class="row justify-content-center">
+			<br><br>
 			<form action="process.php" method="POST">
 				<input type="hidden" name="id" value="<?php echo $id; ?>">
 
@@ -234,7 +185,55 @@
 				</div>
 			</form>
 		</div>
-    </div>
+		<span style="padding-left:20px">
+			<div class="row justify-content-center">
+				<table class="table">
+					<thead>
+						<tr>
+							<th>Name</th>
+							<th>Type</th>
+							<th>Brand</th>
+							<th>Calories</th>
+							<th>Fat</th>
+							<th>Cholesterol</th>
+							<th>Sodium</th>
+							<th>Carbs</th>
+							<th>Protein</th>
+							<th colspan="2">Action</th>
+						</tr>
+					</thread>
+
+					<script src="validateAdmin.js"></script>
+
+					<form action="MealMaker.php" method="post" id="addFood"></form>
+					<form action="delete.php" method="post" id="deleteFood" onsubmit="return validateDelete()"></form>
+					
+					
+					
+					<?php
+						while ($row = $result->fetch_assoc()): ?>
+							<tr>
+								<td><?php echo $row['foodName'] ?></td>
+								<td><?php echo $row['foodType'] ?></td>
+								<td><?php echo $row['foodBrand'] ?></td>
+								<td><?php echo $row['calories'] ?></td>
+								<td><?php echo $row['fat'] ?></td>
+								<td><?php echo $row['cholesterol'] ?></td>
+								<td><?php echo $row['sodium'] ?></td>
+								<td><?php echo $row['carbs'] ?></td>
+								<td><?php echo $row['protein'] ?></td>
+
+								<td>
+									<button type="submit" name="ateFood" form="addFood" value="<?= $row['foodID'] ?>"
+										class="btn btn-info">Add</button>
+									<button type="submit" name="deleteFood" form="deleteFood" value="<?= $row['foodID'] ?>"
+										class="btn btn-danger">Delete</button>
+								</td>
+							</tr>
+						<?php endwhile; ?>
+				</table>
+			</div>
+    	</div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
