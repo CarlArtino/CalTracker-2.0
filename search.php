@@ -35,7 +35,6 @@
         <table class="table">
           <thead>
             <tr>
-              <th>ID</th>
               <th>Name</th>
               <th>Type</th>
               <th>Brand</th>
@@ -69,7 +68,6 @@
 			     while ($row = $raw_results->fetch_assoc()):?>
 
       <tr>
-        <td><?php echo $row['foodID'] ?></td>
         <td><?php echo $row['foodName'] ?></td>
         <td><?php echo $row['foodType'] ?></td>
         <td><?php echo $row['foodBrand'] ?></td>
