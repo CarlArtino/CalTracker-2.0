@@ -89,6 +89,7 @@
 							<option value="Grain">Grain</option>
 							<option value="Dairy">Dairy</option>
 							<option value="Junk">Junk</option>
+							<option value="Ingredient">Ingredient</option>
 							<option value="Other">Other</option>
 							</select>
 							<?php endif; ?>
