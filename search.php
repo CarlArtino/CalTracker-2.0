@@ -23,6 +23,9 @@
             <li class="nav-item active">
               <a class="nav-link" href="MealMaker.php">Home</a>
             </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="CalTracker.php">Add Items</a>
+            </li>
           </ul>
         </div>
       </nav>
