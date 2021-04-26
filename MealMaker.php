@@ -28,9 +28,9 @@
 	<body>
 		<?php
 			// Database Connection
-
-			$mysqli = new mysqli('localhost', 'root', '', 'CalTracker') or die(mysqli_error(mysqli));
-
+			
+			$mysqli = new mysqli("SG-CalTracker-4216-mysql-master.servers.mongodirector.com", "AHelmick", "FunPassword1!", "CalTracker", 3306) or die(mysqli_error(mysqli));
+			
             // Test isset for session array. set if not
 
 		    $setArray = isset($_SESSION["currentMeal"]);

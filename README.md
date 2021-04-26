@@ -17,3 +17,7 @@ Setup
 
 5.  Navigate to http://localhost/SeniorSeminar/CalTracker-2.0/MealMaker.php in
     your browser to open the PHP app
+
+ 
+
+<https://caltracker.000webhostapp.com/index.html>

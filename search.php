@@ -54,7 +54,7 @@
 					<form action="delete.php" method="post" id="deleteFood" onsubmit="return validateDelete()"></form>
       <?php
       //database connection
-      			$mysqli = new mysqli('localhost', 'root', '', 'CalTracker') or die(mysqli_error(mysqli));
+      $mysqli = new mysqli("SG-CalTracker-4216-mysql-master.servers.mongodirector.com", "AHelmick", "FunPassword1!", "CalTracker", 3306) or die(mysqli_error(mysqli));
 
       //getting search value
             $query = $_GET['search'];

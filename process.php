@@ -4,7 +4,7 @@ if(!isset($_SESSION)){
  session_start();
 }
 
-$mysqli = new mysqli('localhost', 'root', '', 'CalTracker') or die(mysqli_error($mysqli));
+$mysqli = new mysqli("SG-CalTracker-4216-mysql-master.servers.mongodirector.com", "AHelmick", "FunPassword1!", "CalTracker", 3306) or die(mysqli_error(mysqli));
 
 $id = 0;
 $price = '';
@@ -23,7 +23,7 @@ if (isset($_POST['save'])) {
 	$protein = $_POST['fProtein'];
 
     $mysqli->query("INSERT INTO foods (foodName, foodType, foodBrand, calories, fat, cholesterol, sodium, carbs, protein) 
-					VALUES('$foodName', '$foodType', '$foodBrand', '$calories', '$fat', '$cholesterol', '$sodium', '$carbs', '$protein')") or die($mysqli->error);
+					VALUES(\"$foodName\", \"$foodType\", \"$foodBrand\", \"$calories\", \"$fat\", \"$cholesterol\", \"$sodium\", \"$carbs\", \"$protein\")") or die($mysqli->error);
 
     $_SESSION['message'] = "Food has been saved!";
     $_SESSION['msg_type'] = "success";

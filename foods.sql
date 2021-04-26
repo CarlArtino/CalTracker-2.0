@@ -4,12 +4,12 @@ CREATE TABLE IF NOT EXISTS `foods` (
   `foodName` varchar(100) CHARACTER SET utf8 NOT NULL,
   `foodType` varchar(100) CHARACTER SET utf8 NOT NULL,
   `foodBrand` varchar(100) CHARACTER SET utf8 NOT NULL,
-  `calories` int(11) NOT NULL,
-  `fat` int(11) NOT NULL,
-  `cholesterol` int(11) NOT NULL,
-  `sodium` int(11) NOT NULL,
-  `carbs` int(11) NOT NULL,
-  `protein` int(11) NOT NULL,
+  `calories` FLOAT(11) NOT NULL,
+  `fat` FLOAT(11) NOT NULL,
+  `cholesterol` FLOAT(11) NOT NULL,
+  `sodium` FLOAT(11) NOT NULL,
+  `carbs` FLOAT(11) NOT NULL,
+  `protein` FLOAT(11) NOT NULL,
   PRIMARY KEY (`foodID`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 COMMIT;
