@@ -184,28 +184,31 @@
 		</div>
 		<span style="padding-left:20px">
 			<div class="row justify-content-center">
-				<table class="table">
-					<thead>
+				<script src="hideColumns.js"></script>
+
+				<div id="checkbox_div">
+				<input type="checkbox" value="hide" id="hideExtra" onchange="hide_show_table();">Hide Extra Columns
+			</div>
+
+			<table class="table" id="table">
+					
 						<tr>
 							<th>Name</th>
 							<th>Type</th>
 							<th>Brand</th>
 							<th>Calories</th>
-							<th>Fat (g)</th>
-							<th>Cholesterol (mg)</th>
-							<th>Sodium (mg)</th>
-							<th>Carbs (g)</th>
-							<th>Protein (g)</th>
+							<th id="fat_col_head">Fat (g)</th>
+							<th id="cholesterol_col_head">Cholesterol (mg)</th>
+							<th id="sodium_col_head">Sodium (mg)</th>
+							<th id="carbs_col_head">Carbs (g)</th>
+							<th id="protein_col_head">Protein (g)</th>
 							<th colspan="2">Action</th>
 						</tr>
-					</thread>
 
 					<script src="validateAdmin.js"></script>
 
 					<form action="MealMaker.php" method="post" id="addFood"></form>
 					<form action="delete.php" method="post" id="deleteFood" onsubmit="return validateDelete()"></form>
-					
-					
 					
 					<?php
 						while ($row = $result->fetch_assoc()): ?>
@@ -214,11 +217,11 @@
 								<td><?php echo $row['foodType'] ?></td>
 								<td><?php echo $row['foodBrand'] ?></td>
 								<td><?php echo $row['calories'] ?></td>
-								<td><?php echo $row['fat'] ?></td>
-								<td><?php echo $row['cholesterol'] ?></td>
-								<td><?php echo $row['sodium'] ?></td>
-								<td><?php echo $row['carbs'] ?></td>
-								<td><?php echo $row['protein'] ?></td>
+								<td class="fat_col"><?php echo $row['fat'] ?></td>
+								<td class="cholesterol_col"><?php echo $row['cholesterol'] ?></td>
+								<td class="sodium_col"><?php echo $row['sodium'] ?></td>
+								<td class="carbs_col"><?php echo $row['carbs'] ?></td>
+								<td class="protein_col"><?php echo $row['protein'] ?></td>
 
 								<td>
 									<button type="submit" name="ateFood" form="addFood" value="<?= $row['foodID'] ?>"
