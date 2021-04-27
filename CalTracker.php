@@ -11,10 +11,6 @@
     </head>
     <body>
     <?php 
-	
-		if(!isset($_SESSION)){
-			session_start();
-		}
 		
 		require_once 'process.php'; 
 		require_once 'delete.php'; 
