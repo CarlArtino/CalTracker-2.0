@@ -51,7 +51,7 @@
     <div class="container">
 		<?php
 			$mysqli = new mysqli("localhost", "id16688663_ahelmick", "~)qh]P#6X0B!#lg)", "id16688663_caltracker", 3306) or die(mysqli_error(mysqli));
-			$result = $mysqli->query("SELECT * FROM foods") or die($mysqli_error->error);
+			$result = $mysqli->query("SELECT * FROM foods ORDER BY foodName") or die($mysqli_error->error);
 			//pre_r($result->fetch_assoc());
 
 		?>
