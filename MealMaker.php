@@ -79,24 +79,30 @@
 
 	<span style="padding-left:20px">
     <div class="container">
+
     	<h2> Your Current Meal </h2>
+		<center>
+			<script src="javascript/hideColumns.js"></script>
+
+			<div id="checkbox_div">
+			<input type="checkbox" value="hide" id="hideExtra" onchange="hide_show_table();">Hide Extra Columns
+			</div>
+		</center>
         <div class="row justify-content-center">
             <table class="table">
-                <thead>
                     <tr>
                         <th>Name</th>
                         <th>Type</th>
                         <th>Brand</th>
                         <th>Calories</th>
                         <th>Fat</th>
-						<th>Fat (g)</th>
-						<th>Cholesterol (mg)</th>
-						<th>Sodium (mg)</th>
-						<th>Carbs (g)</th>
-						<th>Protein (g)</th>
+						<th id="fat_col_head">Fat (g)</th>
+						<th id="cholesterol_col_head">Cholesterol (mg)</th>
+						<th id="sodium_col_head">Sodium (mg)</th>
+						<th id="carbs_col_head">Carbs (g)</th>
+						<th id="protein_col_head">Protein (g)</th>
 						<th colspan="2"></th>
                     </tr>
-                </thread>
 
 				<form action="MealMaker.php" method="post" id="removeFood"></form>
 
@@ -132,11 +138,11 @@
 								<td><?php echo $row['foodType'] ?></td>
 								<td><?php echo $row['foodBrand'] ?></td>
 								<td><?php echo $row['calories'] ?></td>
-								<td><?php echo $row['fat'] ?></td>
-								<td><?php echo $row['cholesterol'] ?></td>
-								<td><?php echo $row['sodium'] ?></td>
-								<td><?php echo $row['carbs'] ?></td>
-								<td><?php echo $row['protein'] ?></td>
+								<td class="fat_col"><?php echo $row['fat'] ?></td>
+								<td class="cholesterol_col"><?php echo $row['cholesterol'] ?></td>
+								<td class="sodium_col"><?php echo $row['sodium'] ?></td>
+								<td class="carbs_col"><?php echo $row['carbs'] ?></td>
+								<td class="protein_col"><?php echo $row['protein'] ?></td>
 								<td>
 									<button type="submit" name="removeFood" form="removeFood" value="<?= $i ?>"
 										class="btn btn-info">Remove</button>
@@ -149,11 +155,11 @@
 							<td></td>
 							<td></td>
 							<td><?php echo $totCal ?></td>
-							<td><?php echo $totFat ?></td>
-							<td><?php echo $totChol ?></td>
-							<td><?php echo $totSod ?></td>
-							<td><?php echo $totCarb ?></td>
-							<td><?php echo $totProt ?></td>
+							<td class="fat_col"><?php echo $totFat ?></td>
+							<td class="cholesterol_col"><?php echo $totChol ?></td>
+							<td class="sodium_col"><?php echo $totSod ?></td>
+							<td class="carbs_col"><?php echo $totCarb ?></td>
+							<td class="protein_col"><?php echo $totProt ?></td>
 						</tr>
 				    	<?php
 				    }

@@ -182,7 +182,6 @@
 				</div>
 			</form>
 		</div>
-		<span style="padding-left:20px">
 			<div class="row justify-content-center">
 				<script src="javascript/hideColumns.js"></script>
 
