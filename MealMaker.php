@@ -11,19 +11,6 @@
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     </head>
-	<style>
-		#button1 {
-			background-color: white;
-			color: black;
-			border: 2px solid #4CAF50; /* Green */
-			border-radius: 4px;
-		}
-		
-		#button1:hover {
-			background-color: #3e8e41;
-			color: white;
-		}
-	</style>
 
 	<body>
 		<?php
@@ -169,7 +156,7 @@
         </div>
         <form action="CalTracker.php" method="post" id="addFood"></form>
 
-		<button type="submit" id="button1" form="addFood" value="Submit">Add another food</button>
+		<button type="submit" class="btn btn-success" form="addFood" value="Submit">Add another food</button>
 
 		<div align="right">
 			<form onsubmit="return confirm('Do you really want to clear the table?');" action="MealMaker.php" method="post" id="clearTable"></form>
