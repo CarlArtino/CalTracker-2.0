@@ -12,7 +12,7 @@
     <body>
     <?php 
 		
-		require_once 'process.php'; 
+		require_once 'insert.php'; 
 		require_once 'delete.php'; 
 	 ?>
 
@@ -57,7 +57,7 @@
 		?>
 		<div class="row justify-content-center">
 			<br><br>
-			<form action="process.php" method="POST">
+			<form action="insert.php" method="POST">
 				<input type="hidden" name="id" value="<?php echo $id; ?>">
 
 				<div class="form-row">
