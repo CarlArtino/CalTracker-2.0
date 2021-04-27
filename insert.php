@@ -7,18 +7,20 @@ $update = false;
 
 if (isset($_POST['save'])) {
 
-    $foodName = $_POST['fName'];
-    $foodType = $_POST['fType'];
-    $foodBrand = $_POST['fBrand'];
-    $calories = $_POST['fCalories'];
-    $fat = $_POST['fFat'];
-	$cholesterol = $_POST['fCholesterol'];
-	$sodium = $_POST['fSodium'];
-	$carbs = $_POST['fCarbs'];
-	$protein = $_POST['fProtein'];
+    $foodName = $_POST['name'];
+    $foodType = $_POST['type'];
+    $foodBrand = $_POST['brand'];
+    $calories = $_POST['calories'];
+    $fat = $_POST['fat'];
+	$cholesterol = $_POST['cholesterol'];
+	$sodium = $_POST['sodium'];
+	$carbs = $_POST['carbs'];
+	$protein = $_POST['protein'];
 
     $mysqli->query("INSERT INTO foods (foodName, foodType, foodBrand, calories, fat, cholesterol, sodium, carbs, protein) 
 					VALUES(\"$foodName\", \"$foodType\", \"$foodBrand\", \"$calories\", \"$fat\", \"$cholesterol\", \"$sodium\", \"$carbs\", \"$protein\")") or die($mysqli->error);
 
     header("location: CalTracker.php");
 }
+
+?>

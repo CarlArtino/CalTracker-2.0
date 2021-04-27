@@ -67,7 +67,7 @@
 							if ($update == false):
 							?>
 							<label>Name</label> <br>
-							<input type="text" name="fName" class="form-control" placeholder="Enter name">
+							<input type="text" name="name" class="form-control" placeholder="Enter name">
 							<?php endif; ?>
 						</div>
 					</div>
@@ -78,7 +78,7 @@
 							if ($update == false):
 							?>
 							<label for="exampleFormControlSelect1">Type</label>
-							<select class="form-control" name = "fType" id="exampleFormControlSelect1">
+							<select class="form-control" name = "type" id="exampleFormControlSelect1">
 							<option value="Fruit">Fruit</option>
 							<option value="Vegetable">Vegetable</option>
 							<option value="Meat">Meat</option>
@@ -95,7 +95,7 @@
 
 				<div class="form-group">
 					<label>Brand</label> <br>
-					<input type="text" name="fBrand" class="form-control" placeholder="Enter brand">
+					<input type="text" name="brand" class="form-control" placeholder="Enter brand">
 				</div>
 
 				<div class="form-row">
@@ -105,7 +105,7 @@
 							if ($update == false):
 							?>
 							<label>Calories</label> <br>
-							<input type="text" name="fCalories" class="form-control" placeholder="Enter calories">
+							<input type="text" name="calories" class="form-control" placeholder="Enter calories">
 							<?php endif; ?>
 						</div>
 					</div>
@@ -116,7 +116,7 @@
 							if ($update == false):
 							?>
 							<label>Fat (g)</label> <br>
-							<input type="text" name="fFat" class="form-control" placeholder="Enter fat">
+							<input type="text" name="fat" class="form-control" placeholder="Enter fat">
 							<?php endif; ?>
 						</div>
 					</div>
@@ -129,7 +129,7 @@
 							if ($update == false):
 							?>
 							<label>Cholesterol (mg)</label> <br>
-							<input type="text" name="fCholesterol" class="form-control" placeholder="Enter cholesterol">
+							<input type="text" name="cholesterol" class="form-control" placeholder="Enter cholesterol">
 							<?php endif; ?>
 						</div>
 					</div>
@@ -140,7 +140,7 @@
 							if ($update == false):
 							?>
 							<label>Sodium (mg)</label> <br>
-							<input type="text" name="fSodium" class="form-control" placeholder="Enter sodium">
+							<input type="text" name="sodium" class="form-control" placeholder="Enter sodium">
 							<?php endif; ?>
 						</div>
 					</div>
@@ -153,7 +153,7 @@
 							if ($update == false):
 							?>
 							<label>Carbs (g)</label> <br>
-							<input type="text" name="fCarbs" class="form-control" placeholder="Enter carbs">
+							<input type="text" name="carbs" class="form-control" placeholder="Enter carbs">
 							<?php endif; ?>
 						</div>
 					</div>
@@ -164,7 +164,7 @@
 							if ($update == false):
 							?>
 							<label>Protein (g)</label> <br>
-							<input type="text" name="fProtein" class="form-control" placeholder="Enter protein">
+							<input type="text" name="protein" class="form-control" placeholder="Enter protein">
 							<?php endif; ?>
 						</div>
 					</div>
