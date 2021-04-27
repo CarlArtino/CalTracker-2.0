@@ -115,7 +115,7 @@
 							<?php
 							if ($update == false):
 							?>
-							<label>Fat</label> <br>
+							<label>Fat (g)</label> <br>
 							<input type="text" name="fFat" class="form-control" placeholder="Enter fat">
 							<?php endif; ?>
 						</div>
@@ -128,7 +128,7 @@
 							<?php
 							if ($update == false):
 							?>
-							<label>Cholesterol</label> <br>
+							<label>Cholesterol (mg)</label> <br>
 							<input type="text" name="fCholesterol" class="form-control" placeholder="Enter cholesterol">
 							<?php endif; ?>
 						</div>
@@ -139,7 +139,7 @@
 							<?php
 							if ($update == false):
 							?>
-							<label>Sodium</label> <br>
+							<label>Sodium (mg)</label> <br>
 							<input type="text" name="fSodium" class="form-control" placeholder="Enter sodium">
 							<?php endif; ?>
 						</div>
@@ -152,7 +152,7 @@
 							<?php
 							if ($update == false):
 							?>
-							<label>Carbs</label> <br>
+							<label>Carbs (g)</label> <br>
 							<input type="text" name="fCarbs" class="form-control" placeholder="Enter carbs">
 							<?php endif; ?>
 						</div>
@@ -163,7 +163,7 @@
 							<?php
 							if ($update == false):
 							?>
-							<label>Protein</label> <br>
+							<label>Protein (g)</label> <br>
 							<input type="text" name="fProtein" class="form-control" placeholder="Enter protein">
 							<?php endif; ?>
 						</div>
@@ -191,11 +191,11 @@
 							<th>Type</th>
 							<th>Brand</th>
 							<th>Calories</th>
-							<th>Fat</th>
-							<th>Cholesterol</th>
-							<th>Sodium</th>
-							<th>Carbs</th>
-							<th>Protein</th>
+							<th>Fat (g)</th>
+							<th>Cholesterol (mg)</th>
+							<th>Sodium (mg)</th>
+							<th>Carbs (g)</th>
+							<th>Protein (g)</th>
 							<th colspan="2">Action</th>
 						</tr>
 					</thread>
