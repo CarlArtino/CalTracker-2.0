@@ -39,11 +39,11 @@
               <th>Type</th>
               <th>Brand</th>
               <th>Calories</th>
-              <th>Fat</th>
-              <th>Cholesterol</th>
-              <th>Sodium</th>
-              <th>Carbs</th>
-              <th>Protein</th>
+              <th>Fat (g)</th>
+              <th>Cholesterol (mg)</th>
+              <th>Sodium (mg)</th>
+              <th>Carbs (g)</th>
+              <th>Protein (g)</th>
               <th colspan="2">Action</th>
             </tr>
           </thread>

@@ -88,11 +88,11 @@
                         <th>Type</th>
                         <th>Brand</th>
                         <th>Calories</th>
-                        <th>Fat</th>
-						<th>Cholesterol</th>
-						<th>Sodium</th>
-						<th>Carbs</th>
-						<th>Protein</th>
+                        <th>Fat (g)</th>
+						<th>Cholesterol (g)</th>
+						<th>Sodium (mg)</th>
+						<th>Carbs (mg)</th>
+						<th>Protein (g)</th>
 						<th colspan="2"></th>
                     </tr>
                 </thread>
