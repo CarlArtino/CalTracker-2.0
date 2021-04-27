@@ -186,10 +186,10 @@
 				</div>
 			</form>
 		</div>
-		<span style="padding-left:20px">
+		
 			<div class="row justify-content-center">
 
-			<script src="javascript/hideColumns.js"></script>
+				<script src="javascript/hideColumns.js"></script>
 
 				<div id="checkbox_div">
 				<input type="checkbox" value="hide" id="hideExtra" onchange="hide_show_table();">Hide Extra Columns
@@ -214,7 +214,6 @@
 					<form action="MealMaker.php" method="post" id="addFood"></form>
 					<form action="delete.php" method="post" id="deleteFood" onsubmit="return validateDelete()"></form>
 
-					<!-- End hide column stuff -->
 					 <?php 
 						while ($row = $result->fetch_assoc()): ?>
 							<tr>
