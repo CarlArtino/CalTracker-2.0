@@ -189,7 +189,7 @@
 		<span style="padding-left:20px">
 			<div class="row justify-content-center">
 
-			<script src="hideColumns.js"></script>
+			<script src="javascript/hideColumns.js"></script>
 
 				<div id="checkbox_div">
 				<input type="checkbox" value="hide" id="hideExtra" onchange="hide_show_table();">Hide Extra Columns
@@ -209,7 +209,7 @@
 							<th colspan="2">Action</th>
 						</tr>
 
-					<script src="validateAdmin.js"></script>
+					<script src="javascript/validateAdmin.js"></script>
 
 					<form action="MealMaker.php" method="post" id="addFood"></form>
 					<form action="delete.php" method="post" id="deleteFood" onsubmit="return validateDelete()"></form>
