@@ -1,9 +1,7 @@
 <!doctype html>
-<html lang="en">
     <head>
         <link rel="stylesheet" href="css\stylesheet.css">
         <title>Search</title>
-        <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -11,30 +9,28 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     </head>
     <body>
-    <nav class="navbar sticky-top navbar-expand-lg navbar-light" style="background-color: transparent;">
-		<a class="navbar-brand" href="/">
-			<img src="logo.png" alt="logo" style="width:308px;height:90px;">
-		</a>
-    <form action="search.php" method="GET">
-			<input type="text" name="search" />
-			<input type="submit" value="Search" />
-   		</form>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse" id="navbarNav">
-			<ul class="navbar-nav ml-md-auto">
-				<li class="nav-item active">
-					<a class = "navlink" href="MealMaker.php">My Meal</a>
-				</li>
-				<li class="nav-item">
-					<a class = "navlink" href="FoodPicker.php">Foods</a>
-				</li>
-			</ul>
-		</div>
-	  </nav>
+      <nav class="navbar sticky-top navbar-expand-lg navbar-light" style="background-color: transparent;">
+        <a class="navbar-brand">
+          <img src="logo.png" alt="logo" style="width:308px;height:90px;">
+        </a>
+        <form action="search.php" method="GET">
+          <input type="text" name="search" />
+          <input type="submit" value="Search" />
+        </form>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"></button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-md-auto">
+            <li class="nav-item active">
+              <a class = "navlink" href="MealMaker.php">My Meal</a>
+            </li>
+            <li class="nav-item">
+              <a class = "navlink" href="FoodPicker.php">Foods</a>
+            </li>
+          </ul>
+        </div>
+	    </nav>
       <div class="container">
-      <div class="row justify-content-center">
+        <div class="row justify-content-center">
           <center>
             <script src="javascript/hideColumns.js"></script>
 
@@ -42,7 +38,7 @@
             <input type="checkbox" value="hide" id="hideExtra" onchange="hide_show_table();">Hide Extra Columns
             </div>
           </center>
-        <table class="table">
+          <table class="table">
             <tr>
               <th>Name</th>
               <th>Type</th>
@@ -55,47 +51,41 @@
 							<th id="protein_col_head">Protein (g)</th>
               <th colspan="2">Action</th>
             </tr>
-		  
-					<script src="validateAdmin.js"></script>
+					  <script src="validateAdmin.js"></script>
 
-					<form action="MealMaker.php" method="post" id="addFood"></form>
-					<form action="delete.php" method="post" id="deleteFood" onsubmit="return validateDelete()"></form>
-      <?php
-      //database connection
-      $mysqli = new mysqli("localhost", "id16688663_ahelmick", "~)qh]P#6X0B!#lg)", "id16688663_caltracker", 3306) or die(mysqli_error(mysqli));
-      
-      //getting search value
-            $query = $_GET['search'];
+					  <form action="MealMaker.php" method="post" id="addFood"></form>
+					  <form action="delete.php" method="post" id="deleteFood" onsubmit="return validateDelete()"></form>
 
-            //find results from table
-
-  		        $raw_results = $mysqli->query("SELECT * FROM foods
+            <?php
+               $mysqli = new mysqli("localhost", "id16688663_ahelmick", "~)qh]P#6X0B!#lg)", "id16688663_caltracker", 3306) or die(mysqli_error(mysqli));
+               $query = $_GET['search'];
+  		         $raw_results = $mysqli->query("SELECT * FROM foods
   			      WHERE (`foodName` LIKE '%".$query."%') ORDER BY foodName") or die(mysql_error());
 
-            //display table of results
-			     while ($row = $raw_results->fetch_assoc()):?>
+			      while ($row = $raw_results->fetch_assoc()) {?>
 
-      <tr>
-        <td><?php echo $row['foodName'] ?></td>
-        <td><?php echo $row['foodType'] ?></td>
-        <td><?php echo $row['foodBrand'] ?></td>
-        <td><?php echo $row['calories'] ?></td>
-        <td class="fat_col"><?php echo $row['fat'] ?></td>
-        <td class="cholesterol_col"><?php echo $row['cholesterol'] ?></td>
-        <td class="sodium_col"><?php echo $row['sodium'] ?></td>
-        <td class="carbs_col"><?php echo $row['carbs'] ?></td>
-        <td class="protein_col"><?php echo $row['protein'] ?></td>
+              <tr>
+                <td><?php echo $row['foodName'] ?></td>
+                <td><?php echo $row['foodType'] ?></td>
+                <td><?php echo $row['foodBrand'] ?></td>
+                <td><?php echo $row['calories'] ?></td>
+                <td class="fat_col"><?php echo $row['fat'] ?></td>
+                <td class="cholesterol_col"><?php echo $row['cholesterol'] ?></td>
+                <td class="sodium_col"><?php echo $row['sodium'] ?></td>
+                <td class="carbs_col"><?php echo $row['carbs'] ?></td>
+                <td class="protein_col"><?php echo $row['protein'] ?></td>
 
-        <td>
-          <button type="submit" name="addFood" form="addFood" value="<?= $row['foodID'] ?>"
-            class="btn btn-info">Add</button>
-		  <button type="submit" name="deleteFood" form="deleteFood" value="<?= $row['foodID'] ?>"
-			class="btn btn-danger">Delete</button>
-        </td>
-      </tr>
-			     <?php  endwhile; ?>
-      </table>
-    </div>
-
+                <td>
+                  <button type="submit" name="addFood" form="addFood" value="<?= $row['foodID'] ?>"
+                  class="btn btn-info">Add</button>
+                  <button type="submit" name="deleteFood" form="deleteFood" value="<?= $row['foodID'] ?>"
+                  class="btn btn-danger">Delete</button>
+                </td>
+              </tr>
+			     <?php  
+           }
+            ?>
+      	</table>
+    	</div>
   </body>
 </html>
