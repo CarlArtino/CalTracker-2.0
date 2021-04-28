@@ -217,7 +217,7 @@
 								<td class="protein_col"><?php echo $row['protein'] ?></td>
 
 								<td>
-									<button type="submit" name="ateFood" form="addFood" value="<?= $row['foodID'] ?>"
+									<button type="submit" name="addFood" form="addFood" value="<?= $row['foodID'] ?>"
 										class="btn btn-info">Add</button>
 									<button type="submit" name="deleteFood" form="deleteFood" value="<?= $row['foodID'] ?>"
 										class="btn btn-danger">Delete</button>
