@@ -12,43 +12,16 @@
     </head>
 
 	<body>
-		<?php
-						
-						$mysqli = new mysqli("SG-CalTracker-4216-mysql-master.servers.mongodirector.com", "AHelmick", "FunPassword1!", "CalTracker", 3306) or die(mysqli_error(mysqli));
 
-		    $setArray = isset($_SESSION["currentMeal"]);
-		    if (!$setArray) $_SESSION["currentMeal"] = array();
-
-		    $adding = isset($_POST["addFood"]);
-		    if ($adding) {
-		    	array_push($_SESSION["currentMeal"], $_POST["addFood"]);
-		    }
-
-			if (isset($_POST["removeFood"]))
-			{
-				unset($_SESSION["currentMeal"][$_POST["removeFood"]]);
-				$_SESSION["currentMeal"] = array_values($_SESSION["currentMeal"]);
-			}
-
-			$setClear = isset($_POST["clearTable"]);
-			if($setClear)
-			{
-				$_SESSION["currentMeal"] = array();
-			}
-
-		?>
-
-<nav class="navbar sticky-top navbar-expand-lg navbar-light" style="background-color: transparent;">
-		<a class="navbar-brand" >
-			<img src="logo.png" alt="logo" style="width:308px;height:90px;">
-		</a>
-		<form action="search.php" method="GET">
-			<input type="text" name="search" />
-			<input type="submit" value="Search" />
-   		</form>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
+		<nav class="navbar sticky-top navbar-expand-lg navbar-light" style="background-color: transparent;">
+			<a class="navbar-brand" >
+				<img src="logo.png" alt="logo" style="width:308px;height:90px;">
+			</a>
+			<form action="search.php" method="GET">
+				<input type="text" name="search" />
+				<input type="submit" value="Search" />
+			</form>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"></button>
 			<div class="collapse navbar-collapse" id="navbarNav">
 				<ul class="navbar-nav ml-md-auto">
 					<li class="nav-item active">
@@ -62,7 +35,6 @@
 		</nav>
 
 		<div class="container">
-		
 			<p class="h1"> Your Current Meal </p>
 			<center>
 				<script src="javascript/hideColumns.js"></script>
@@ -95,18 +67,38 @@
 						$totCarb = 0;
 						$totProt = 0;
 
-						for ($i=0; $i<count($_SESSION["currentMeal"]); $i++){
+						$mysqli = new mysqli("SG-CalTracker-4216-mysql-master.servers.mongodirector.com", "AHelmick", "FunPassword1!", "CalTracker", 3306) or die(mysqli_error(mysqli));
+
+						$setArray = isset($_SESSION["currentMeal"]);
+						$adding = isset($_POST["addFood"]);
+						$setClear = isset($_POST["clearTable"]);
+
+						if (!$setArray) {
+							$_SESSION["currentMeal"] = array();
+						} 
+						
+						if ($adding) {
+							array_push($_SESSION["currentMeal"], $_POST["addFood"]);
+						}
+
+						if (isset($_POST["removeFood"]))
+						{
+							unset($_SESSION["currentMeal"][$_POST["removeFood"]]);
+							$_SESSION["currentMeal"] = array_values($_SESSION["currentMeal"]);
+						}
+
+						
+						if($setClear)
+						{
+							$_SESSION["currentMeal"] = array();
+						}
+
+						$i=0;
+						for ($i; $i<count($_SESSION["currentMeal"]); $i++){
 
 							$entry = $_SESSION["currentMeal"][$i];
 							$result = $mysqli->query("SELECT * FROM foods WHERE foodId=$entry") or die($mysqli_error->error);
 							$row = mysqli_fetch_array($result);
-
-							$totCal += $row['calories'];
-							$totFat += $row['fat'];
-							$totChol += $row['cholesterol'];
-							$totSod += $row['sodium'];
-							$totCarb += $row['carbs'];
-							$totProt += $row['protein'];
 							?>
 
 							<tr>
@@ -125,6 +117,12 @@
 								</td>
 							</tr>
 						<?php	
+							$totCal += $row['calories'];
+							$totFat += $row['fat'];
+							$totChol += $row['cholesterol'];
+							$totSod += $row['sodium'];
+							$totCarb += $row['carbs'];
+							$totProt += $row['protein'];
 						}
 						?>
 						<tr>

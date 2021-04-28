@@ -2,9 +2,6 @@
 
 $mysqli = new mysqli("SG-CalTracker-4216-mysql-master.servers.mongodirector.com", "AHelmick", "FunPassword1!", "CalTracker", 3306) or die(mysqli_error(mysqli));
 
-$id = 0;
-$update = false;
-
 if (isset($_POST['save'])) {
 
     $foodName = $_POST['name'];
