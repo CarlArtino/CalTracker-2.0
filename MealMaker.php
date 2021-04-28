@@ -50,7 +50,7 @@
 
 		?>
 
-<nav class="navbar sticky-top navbar-expand-lg navbar-light" style="background-color: transparent;">
+<nav class="navbar sticky-top navbar-expand-lg navbar-light" id = "navbar2" style="background-color: transparent;">
 		<a class="navbar-brand" >
 			<img src="logo.png" alt="logo" style="width:308px;height:90px;">
 		</a>

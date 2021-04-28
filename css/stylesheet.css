@@ -23,7 +23,7 @@
     animation: animation 100s linear infinite;
 }
 
-.navbar2 {
+#navbar2 {
     background: url("../pictures/background2.jpg");
     color: #eee;
     width: 100%;
