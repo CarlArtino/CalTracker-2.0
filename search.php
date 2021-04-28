@@ -28,7 +28,7 @@
 					<a class = "navlink" href="MealMaker.php">My Meal</a>
 				</li>
 				<li class="nav-item">
-					<a class = "navlink" href="CalTracker.php">Foods</a>
+					<a class = "navlink" href="FoodPicker.php">Foods</a>
 				</li>
 			</ul>
 		</div>
