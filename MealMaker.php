@@ -3,6 +3,8 @@
 <!doctype html>
 <html lang="en">
     <head>
+
+		<link rel="stylesheet" href="css\stylesheet.css">
         <title>Meal Maker</title>
         <!-- Required meta tags -->
         <meta charset="utf-8">
@@ -11,19 +13,6 @@
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     </head>
-	<style>
-		#button1 {
-			background-color: white;
-			color: black;
-			border: 2px solid #4CAF50; /* Green */
-			border-radius: 4px;
-		}
-		
-		#button1:hover {
-			background-color: #3e8e41;
-			color: white;
-		}
-	</style>
 
 	<body>
 		<?php
@@ -61,17 +50,24 @@
 
 		?>
 
-	<nav class="navbar sticky-top navbar-expand-lg navbar-light" style="background-color: #ffcfc2;">
-		<a class="navbar-brand" href="#">
-			<img src="pictures/logo.png" alt="logo">
+<nav class="navbar sticky-top navbar-expand-lg navbar-light" style="background-color: transparent;">
+		<a class="navbar-brand" >
+			<img src="logo.png" alt="logo" style="width:308px;height:90px;">
 		</a>
+		<form action="search.php" method="GET">
+			<input type="text" name="search" />
+			<input type="submit" value="Search" />
+   		</form>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
 		<div class="collapse navbar-collapse" id="navbarNav">
 			<ul class="navbar-nav ml-md-auto">
 				<li class="nav-item active">
-					<a class="nav-link" href="MealMaker.php">Home</a>
+					<a class = "navlink" href="MealMaker.php">My Meal</a>
+				</li>
+				<li class="nav-item">
+					<a class = "navlink" href="CalTracker.php">Foods</a>
 				</li>
 			</ul>
 		</div>
