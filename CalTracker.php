@@ -29,7 +29,7 @@
     </div>
     <?php endif ?>
 
-	<nav class="navbar sticky-top navbar-expand-lg navbar-light" id = "navbar2" style="background-color: transparent;">
+	<nav class="navbar sticky-top navbar-expand-lg navbar-light" style="background-color: transparent;">
 		<a class="navbar-brand" href="/">
 			<img src="logo.png" alt="logo" style="width:308px;height:90px;">
 		</a>
@@ -63,7 +63,7 @@
 			<br><br>
 			<form action="insert.php" method="POST">
 				<input type="hidden" name="id" value="<?php echo $id; ?>">
-
+				<br>
 				<div class="form-row">
 					<div class="col">
 						<div class="form-group">
