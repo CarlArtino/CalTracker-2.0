@@ -8,5 +8,5 @@ if (isset($_POST['deleteFood'])) {
 
     $mysqli->query("DELETE FROM foods WHERE foodID = '$id'") or die($mysqli->error);
 
-    header("location: CalTracker.php");
+    header("location: FoodPicker.php");
 }

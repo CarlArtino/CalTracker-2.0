@@ -20,7 +20,7 @@ if (isset($_POST['save'])) {
     $mysqli->query("INSERT INTO foods (foodName, foodType, foodBrand, calories, fat, cholesterol, sodium, carbs, protein) 
 					VALUES(\"$foodName\", \"$foodType\", \"$foodBrand\", \"$calories\", \"$fat\", \"$cholesterol\", \"$sodium\", \"$carbs\", \"$protein\")") or die($mysqli->error);
 
-    header("location: CalTracker.php");
+    header("location: FoodPicker.php");
 }
 
 ?>

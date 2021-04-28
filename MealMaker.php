@@ -55,7 +55,7 @@
 						<a class = "navlink" href="MealMaker.php">My Meal</a>
 					</li>
 					<li class="nav-item">
-						<a class = "navlink" href="CalTracker.php">Foods</a>
+						<a class = "navlink" href="FoodPicker.php">Foods</a>
 					</li>
 				</ul>
 			</div>
@@ -141,7 +141,7 @@
 						</tr>
 				</table>
 			</div>
-			<form action="CalTracker.php" method="post" id="addFood"></form>
+			<form action="FoodPicker.php" method="post" id="addFood"></form>
 
 			<button type="submit" class="btn btn-success" form="addFood" value="Submit">Add another food</button>
 
