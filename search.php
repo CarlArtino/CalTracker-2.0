@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
     <head>
+        <link rel="stylesheet" href="css\stylesheet.css">
         <title>Search</title>
         <!-- Required meta tags -->
         <meta charset="utf-8">
@@ -10,25 +11,28 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     </head>
     <body>
-      <nav class="navbar sticky-top navbar-expand-lg navbar-light" style="background-color: #ffcfc2;">
-        <a class="navbar-brand" href="#">
-			<img src="pictures/logo.png" alt="logo">
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light" id = "navbar2" style="background-color: transparent;">
+		<a class="navbar-brand" href="/">
+			<img src="logo.png" alt="logo" style="width:308px;height:90px;">
 		</a>
-		</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ml-md-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="MealMaker.php">Home</a>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="CalTracker.php">Add Items</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+    <form action="search.php" method="GET">
+			<input type="text" name="search" />
+			<input type="submit" value="Search" />
+   		</form>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNav">
+			<ul class="navbar-nav ml-md-auto">
+				<li class="nav-item active">
+					<a class = "navlink" href="MealMaker.php">My Meal</a>
+				</li>
+				<li class="nav-item">
+					<a class = "navlink" href="CalTracker.php">Foods</a>
+				</li>
+			</ul>
+		</div>
+	  </nav>
       <div class="container">
       <div class="row justify-content-center">
           <center>

@@ -2,6 +2,7 @@
 
 <!doctype html>
     <head>
+		<link rel="stylesheet" href="css\stylesheet.css">
         <title>Meal Maker</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -37,17 +38,24 @@
 
 		?>
 
-		<nav class="navbar sticky-top navbar-expand-lg navbar-light" style="background-color: #ffcfc2;">
-			<a class="navbar-brand" href="#">
-				<img src="pictures/logo.png" alt="logo">
-			</a>
+<nav class="navbar sticky-top navbar-expand-lg navbar-light" style="background-color: transparent;">
+		<a class="navbar-brand" >
+			<img src="logo.png" alt="logo" style="width:308px;height:90px;">
+		</a>
+		<form action="search.php" method="GET">
+			<input type="text" name="search" />
+			<input type="submit" value="Search" />
+   		</form>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
 			<div class="collapse navbar-collapse" id="navbarNav">
 				<ul class="navbar-nav ml-md-auto">
 					<li class="nav-item active">
-						<a class="nav-link" href="MealMaker.php">Home</a>
+						<a class = "navlink" href="MealMaker.php">My Meal</a>
+					</li>
+					<li class="nav-item">
+						<a class = "navlink" href="CalTracker.php">Foods</a>
 					</li>
 				</ul>
 			</div>
