@@ -37,83 +37,54 @@
 			<br><br>
 			<form action="insert.php" method="POST">
 				<br>
-				<div class="form-row">
-					<div class="col">
-						<div class="form-group">
-							<label>Name</label> <br>
-							<input type="text" name="name" class="form-control" placeholder="Enter name">
-						</div>
-					</div>
-
-					<div class="col">
-						<div class="form-group">	
-							<label for="exampleFormControlSelect1">Type</label>
-							<select class="form-control" name = "type" id="exampleFormControlSelect1">
-							<option value="Fruit">Fruit</option>
-							<option value="Vegetable">Vegetable</option>
-							<option value="Meat">Meat</option>
-							<option value="Grain">Grain</option>
-							<option value="Dairy">Dairy</option>
-							<option value="Junk">Junk</option>
-							<option value="Ingredient">Ingredient</option>
-							<option value="Other">Other</option>
-							</select>	
-						</div>
-					</div>
-				</div>
+		
+				<span style="float:left">Name</span>
+				<span style="float:right">Type</span>
+				<br>
+				
+				<span style="float:left"> <input type="text" name="name" class="form-control" placeholder="Enter name"> </span>
+				<span style="float:right">
+					<select class="form-control" name = "type" id="type">
+					<option value="Fruit">Fruit</option>
+					<option value="Vegetable">Vegetable</option>
+					<option value="Meat">Meat</option>
+					<option value="Grain">Grain</option>
+					<option value="Dairy">Dairy</option>
+					<option value="Junk">Junk</option>
+					<option value="Ingredient">Ingredient</option>
+					<option value="Other">Other</option>
+					</select> 
+				</span>
+				<br><br>
 
 				<div class="form-group">
 					<label>Brand</label> <br>
 					<input type="text" name="brand" class="form-control" placeholder="Enter brand">
 				</div>
 
-				<div class="form-row">
-					<div class="col">
-						<div class="form-group">							
-							<label>Calories</label> <br>
-							<input type="text" name="calories" class="form-control" placeholder="Enter calories">							
-						</div>
-					</div>
+				<span style="float:left">Calories</span>
+				<span style="float:right">Fat (g)</span>
+				<br>
 
-					<div class="col">
-						<div class="form-group">							
-							<label>Fat (g)</label> <br>
-							<input type="text" name="fat" class="form-control" placeholder="Enter fat">						
-						</div>
-					</div>
-				</div>
+				<span style="float:left"> <input type="text" name="calories" class="form-control" placeholder="Enter calories"> </span>
+				<span style="float:right"><input type="text" name="fat" class="form-control" placeholder="Enter fat"></span>
+				<br><br>
 
-				<div class="form-row">
-					<div class="col">
-						<div class="form-group">							
-							<label>Cholesterol (mg)</label> <br>
-							<input type="text" name="cholesterol" class="form-control" placeholder="Enter cholesterol">							
-						</div>
-					</div>
+				<span style="float:left">Cholesterol (mg)</span>
+				<span style="float:right">Sodium (mg)</span>
+				<br>
+				
+				<span style="float:left"> <input type="text" name="cholesterol" class="form-control" placeholder="Enter cholesterol"> </span>
+				<span style="float:right"> <input type="text" name="sodium" class="form-control" placeholder="Enter sodium"> </span>
+				<br><br>
 
-					<div class="col">
-						<div class="form-group">						
-							<label>Sodium (mg)</label> <br>
-							<input type="text" name="sodium" class="form-control" placeholder="Enter sodium">						
-						</div>
-					</div>
-				</div>
+				<span style="float:left">Carbs (g)</span>
+				<span style="float:right">Protein (g)</span>
+				<br>
 
-				<div class="form-row">
-					<div class="col">
-						<div class="form-group">						
-							<label>Carbs (g)</label> <br>
-							<input type="text" name="carbs" class="form-control" placeholder="Enter carbs">							
-						</div>
-					</div>
-
-					<div class="col">
-						<div class="form-group">						
-							<label>Protein (g)</label> <br>
-							<input type="text" name="protein" class="form-control" placeholder="Enter protein">
-						</div>
-					</div>
-				</div>
+				<span style="float:left"> <input type="text" name="carbs" class="form-control" placeholder="Enter carbs"> </span>
+				<span style="float:right"> <input type="text" name="protein" class="form-control" placeholder="Enter protein"> </span>
+				<br><br>
 
 				<div class="form-group">
 					<br>
