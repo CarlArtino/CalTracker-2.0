@@ -1,5 +1,6 @@
 <!doctype html>
     <head>
+		<link rel="stylesheet" href="css\all.min.css">
 		<link rel="stylesheet" href="css\stylesheet.css">
         <title>Add Food</title>
         <meta charset="utf-8">
@@ -23,10 +24,10 @@
 		<div class="collapse navbar-collapse" id="navbarNav">
 			<ul class="navbar-nav ml-md-auto">
 				<li class="nav-item active">
-					<a class = "navlink" href="MealMaker.php">My Meal</a>
+					<a class = "navlink" href="MealMaker.php"><i class="fas fa-utensils"></i> My Meal</a>
 				</li>
 				<li class="nav-item">
-					<a class = "navlink" href="FoodPicker.php">Foods</a>
+					<a class = "navlink" href="FoodPicker.php"><i class="fas fa-hamburger"></i> Foods</a>
 				</li>
 			</ul>
 		</div>
@@ -57,11 +58,11 @@
 				</span>
 				<br><br>
 
-				<div class="form-group">
-					<label>Brand</label> <br>
-					<input type="text" name="brand" class="form-control" placeholder="Enter brand">
-				</div>
-
+				<span>Brand</span> 
+				<br>
+				<input type="text" name="brand" class="form-control" placeholder="Enter brand">
+				<br>
+				
 				<span style="float:left">Calories</span>
 				<span style="float:right">Fat (g)</span>
 				<br>

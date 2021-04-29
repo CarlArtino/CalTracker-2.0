@@ -1,5 +1,6 @@
 <!doctype html>
     <head>
+        <link rel="stylesheet" href="css\all.min.css">
         <link rel="stylesheet" href="css\stylesheet.css">
         <title>Search</title>
         <meta charset="utf-8">
@@ -21,10 +22,10 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ml-md-auto">
             <li class="nav-item active">
-              <a class = "navlink" href="MealMaker.php">My Meal</a>
+              <a class = "navlink" href="MealMaker.php"><i class="fas fa-utensils"></i> My Meal</a>
             </li>
             <li class="nav-item">
-              <a class = "navlink" href="FoodPicker.php">Foods</a>
+              <a class = "navlink" href="FoodPicker.php"><i class="fas fa-hamburger"></i> Foods</a>
             </li>
           </ul>
         </div>
@@ -57,7 +58,7 @@
 					  <form action="delete.php" method="post" id="deleteFood" onsubmit="return validateDelete()"></form>
 
             <?php
-               $mysqli = new mysqli("localhost", "id16688663_ahelmick", "~)qh]P#6X0B!#lg)", "id16688663_caltracker", 3306) or die(mysqli_error(mysqli));
+              $mysqli = new mysqli("localhost", "id16688663_ahelmick", "~)qh]P#6X0B!#lg)", "id16688663_caltracker", 3306) or die(mysqli_error(mysqli));
                $query = $_GET['search'];
   		         $raw_results = $mysqli->query("SELECT * FROM foods
   			      WHERE (`foodName` LIKE '%".$query."%') ORDER BY foodName") or die(mysql_error());
