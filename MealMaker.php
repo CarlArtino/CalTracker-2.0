@@ -2,6 +2,7 @@
 
 <!doctype html>
     <head>
+		<link rel="stylesheet" href="css\all.min.css">
 		<link rel="stylesheet" href="css\stylesheet.css">
         <title>Meal Maker</title>
         <meta charset="utf-8">
@@ -13,7 +14,7 @@
 
 	<body>
 
-		<nav class="navbar sticky-top navbar-expand-lg navbar-light" style="background-color: transparent;">
+		<nav class="navbar sticky-top navbar-expand-lg navbar-light" id = "navbar2" style="background-color: transparent;">
 			<a class="navbar-brand" >
 				<img src="logo.png" alt="logo" style="width:308px;height:90px;">
 			</a>
@@ -25,16 +26,17 @@
 			<div class="collapse navbar-collapse" id="navbarNav">
 				<ul class="navbar-nav ml-md-auto">
 					<li class="nav-item active">
-						<a class = "navlink" href="MealMaker.php">My Meal</a>
+						<a class = "navlink" href="MealMaker.php"><i class="fas fa-utensils"></i> My Meal</a>
 					</li>
 					<li class="nav-item">
-						<a class = "navlink" href="FoodPicker.php">Foods</a>
+						<a class = "navlink" href="FoodPicker.php"><i class="fas fa-hamburger"></i> Foods</a>
 					</li>
 				</ul>
 			</div>
 		</nav>
 
 		<div class="container">
+			<br>
 			<p class="h1"> Your Current Meal </p>
 			<center>
 				<script src="javascript/hideColumns.js"></script>
