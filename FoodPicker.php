@@ -58,11 +58,11 @@
 				</span>
 				<br><br>
 
-				<div class="form-group">
-					<label>Brand</label> <br>
-					<input type="text" name="brand" class="form-control" placeholder="Enter brand">
-				</div>
-
+				<span>Brand</span> 
+				<br>
+				<input type="text" name="brand" class="form-control" placeholder="Enter brand">
+				<br>
+				
 				<span style="float:left">Calories</span>
 				<span style="float:right">Fat (g)</span>
 				<br>
